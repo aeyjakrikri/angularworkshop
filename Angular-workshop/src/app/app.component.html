@@ -1,1 +1,27 @@
 <h3>Workshop 2</h3>
+<table class="table">
+  <thead>
+    <tr>
+      <th>รหัสสินค้า</th>
+      <th>ชื่อสินค้า</th>
+      <th>ราคา</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let p of productList">
+      <td>{{p.pId}}</td>
+      <td>{{p.pName}}</td>
+      <td>{{p.pCost}}</td>
+      <td>
+        <button type="button" 
+        class="btn btn-outline-primary" 
+        (click)="selectProduct(p)">
+          เลือกสินค้า</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<app-product-detail 
+[selectedProduct]="selectedProduct">
+</app-product-detail>
