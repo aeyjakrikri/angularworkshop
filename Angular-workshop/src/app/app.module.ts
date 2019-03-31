@@ -20,7 +20,12 @@ import { CommonServiceService } from './common-service.service';
     HttpClientModule,
     FormsModule
   ],
-  providers: [TransferHttpService, TransferState, CommonServiceService], //เพิ่มใหม่
+  providers: [ //เพิ่มใหม่
+    TransferHttpService,
+    TransferState,
+    CommonServiceService
+  ], 
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
