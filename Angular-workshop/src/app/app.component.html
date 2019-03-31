@@ -2,16 +2,18 @@
 <table class="table">
   <thead>
     <tr>
-      <th>รหัสสินค้า</th>
-      <th>ชื่อสินค้า</th>
-      <th>ราคา</th>
-      <th></th>
+      <th width="20%">รหัสสินค้า</th>
+      <th width="20%">ชื่อสินค้า</th>
+      <th width="20%">รูปสินค้า</th>
+      <th width="20%">ราคา</th>
+      <th width="20%"></th>
     </tr>
   </thead>
   <tbody>
     <tr *ngFor="let p of productList">
       <td>{{p.pId}}</td>
       <td>{{p.pName}}</td>
+      <td><img src="{{p.img}}" width="50%"></td>
       <td>{{p.pCost}}</td>
       <td>
         <button type="button" 
